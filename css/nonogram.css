@@ -1,0 +1,291 @@
+/* RESET */
+
+html, body, head, table, strong,
+thead, tbody, tr, th, td, ul, li, a,
+header, aside, p, h1, h2, h3, h4 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 100%;
+  text-decoration: inherit;
+  vertical-align: baseline;
+  box-sizing: inherit;
+
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;    
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Header */
+header {
+  width: 700px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+header > h1 {
+  font-size: 48px;
+  padding: 10px;
+}
+
+header > h4 {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+/* How to Play */
+.how-to {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.how-to:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+aside {
+  text-align: justify;
+  width: 700px;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+aside strong {
+  font-style: italic ;
+}
+
+aside > p {
+  padding-bottom: 20px;
+}
+
+aside > p > a {
+  font-weight: 700;
+}
+
+aside > p > a:hover {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+
+/* Table */
+
+table {
+  width: 463px;
+  height: 463px;
+  box-sizing: border-box;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+td, th {
+  display: block;
+  float: left;
+  width: 29px;
+  margin: 0.5px;
+}
+
+td {
+  display: block;
+  height: 30px;
+  border: 1px solid black;
+}
+
+th {
+  height: 160px;
+  position: relative;
+}
+
+th > ul {
+  position: absolute;
+  bottom: 0;
+}
+
+td:first-child,
+th:first-child {
+  width: 160px;
+  border: 0;
+}
+
+.hint:hover {
+  cursor: pointer;
+}
+
+ul {
+  float: right;
+}
+
+li {
+  width: 29px;
+  height: 29px;
+  margin: 0.5px;
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.pixel {
+  background: black;
+}
+
+.block {
+  background: 
+    linear-gradient(to top left,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) calc(50% - 0.8px),
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) calc(50% + 0.8px),
+      rgba(0,0,0,0) 100%),
+    linear-gradient(to top right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) calc(50% - 0.8px),
+      rgba(0,0,0,1) 50%,
+      rgba(0,0,0,0) calc(50% + 0.8px),
+      rgba(0,0,0,0) 100%);
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.pixel.highlight {
+  background-color: #7F7F00;
+}
+
+li.hint {
+  font-family: "Roboto",sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  height: 30px;
+  margin: auto;
+  width: 30px;
+  text-align: center;
+  padding-top: 6px;
+  width: 30px;
+}
+
+li.hint:hover {
+  background-color: #eee;
+}
+
+li.hint.checked {
+  color: #aaa;
+}
+
+h1.win-state,
+form.win-state > button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  padding: 20px;
+  text-align: center;
+}
+
+.win-state.hint {
+  display: none;
+}
+
+.win-state.cell {
+  border: 0;
+}
+
+h1.win-state {
+  font-size: 96px;
+  margin: 20px auto;
+}
+
+form.win-state {
+  width: 300px;
+  margin: auto;
+}
+
+form.win-state > button {
+  font-size: 48px;
+}
+
+form.win-state > button {
+  background: white;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+form.win-state > button:hover {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/* Lower Buttons */
+
+.board-resets {
+  float: none;
+  width: 510px;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.board-resets > li {
+  float: left;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0;
+  margin-right: 10px;
+  width: 160px;
+  font-family: "Roboto",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.board-resets > li:last-child{
+  margin-right: 0;
+}
+
+.board-resets > li:hover {
+  background: black;
+  color: white;
+}
+
+.board-resets a {
+  display: block;
+  padding: 6px 10px;
+  text-align: center;
+}

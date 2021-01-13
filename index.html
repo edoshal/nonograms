@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nonograms</title>
+    <link rel="stylesheet" type="text/css" href="./css/nonogram.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:700,400' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="
+https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="./js/nonogram.js"></script>
+    <script src="./js/coord.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/nonoview.js"></script>
+
+    <script>
+      $(document).ready( function () {
+        var game = new Nonogram.Board();
+        var $board = $(".board");
+        window.view = new Nonogram.View(game, $board);
+        window.view.setupBoard();
+      });
+    </script>
+
+    <header>
+      <h1>Nonograms</h1>
+      <h4>by Eric Savadian</h4>
+      <a href="javascript:void(0)" class="how-to">How To Play</a>
+    </header>
+
+    <aside class="how-to-text hide">
+      <p>These are picture logic puzzles where cells in a grid must be filled or left blank according to the number hints at the side of the grid to reveal a picture. The numbers indicate the unbroken numbers of filled in squares in a row or column.  For example, "5 3" means there sets of five and three squares in order with at least one blank space between them.</p>
+
+      <p>A great explanation of game strategies can be found by clicking <a href="http://en.wikipedia.org/wiki/Nonogram#Solution_techniques" target="_blank">here</a>
+
+      <p>Click a cell to toggle between <strong>Filled</strong>, <strong>X</strong> or <strong>Empty</strong>. <strong>X's</strong> are simple placeholders; I recommend using them on spaces you've ruled out, but they're completely optional and just for utility</p>
+
+      <p>When you click to toggle a box, you can also drag the mouse to draw the same type of box on multiple cells.</p>
+
+      <p>Keyboard controls are also available. You can use <strong>WASD</strong>, <strong>IJKL</strong> or <strong>Arrow keys</strong> to move around the board. Cells are toggleable with the <strong>Spacebar</strong> or <strong>Enter</strong> key.</p>
+
+      <p>Lastly, you can set a box to <strong>Filled</strong> with the <strong>Z</strong> or <strong>B</strong> keys, <strong>X</strong> with <strong>X</strong> or <strong>N</strong> and <strong>Empty</strong> with <strong>C</strong> or <strong>M</strong>.</p>
+    </aside>
+
+    <table class="board group">
+      <thead>
+        <tr class="board-head group">
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="board-body group">
+      </tbody>
+    </table><br>
+    <ul class="board-resets group">
+      <li class="clear-blocks"><a href="#">Clear Placeholders</a></li>
+      <li class="start-over"><a href="#">Reset Board</a></li>
+      <li class="new-game"><a href="#">New Game</a></li>
+    </ul>
+
+  </body>
+</html>
